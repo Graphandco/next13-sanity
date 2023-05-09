@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "MostraNuova";
+    src: url(../../../public/fonts/mostranuova5.ttf);
+}
+@font-face {
+    font-family: "MostraNuova2";
+    src: url(../../../public/fonts/mostranuova2.ttf);
+}
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 176 179 196;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    --primary: hsl(231 15% 20%);
+    --secondary: hsl(231 15% 68% / 1);
+    --accent: rgb(242 173 13);
+    --text-font: "MostraNuova";
+    --title-font: "MostraNuova2";
+    color: rgb(var(--foreground-rgb));
+    font-family: var(--text-font);
+    font-size: clamp(16px, 10px + 0.8vw, 18px);
+    min-height: 2000px;
+    /* background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb)); */
+}
+
+.container-xl {
+    margin-inline: auto;
+    max-width: 1600px;
+    width: 100%;
+    padding: 0 clamp(15px, 2.5vw, 50px);
+}
+.navlink {
+    position: relative;
+    transition: 0.2s;
+    overflow: hidden;
+    .dot {
+        display: inline-block;
+        margin-right: 2px;
+        width: 8px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--accent);
+        transform: translateY(-50px);
+    }
+    &:hover,
+    &.active {
+        color: white;
+    }
+    &.active .dot {
+        transform: translateY(0) !important;
+    }
+}
+
+/* .navlink:hover,
+.navlink.active {
+    color: white;
+}
+.navlink:before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: calc(50% - 3px);
+    width: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--primary);
+} */
+
+.hamburger-btn {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 50%;
+    .hamburger {
+        transition: translate 0.5s, rotate 0.5s;
+    }
+}
+
+.hamburger-btn.open .hamburger {
+    translate: 3px -3px;
+    rotate: 0.125turn;
+}
+
+.hamburger-btn .line {
+    transition: 0.5s;
+    stroke-dasharray: 60 31 60 300;
+}
+
+.hamburger-btn.open .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+}
+// .menu-mobile {
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     height: 100%;
+//     width: 95%;
+//     background-color: rgb(51 65 85 / 1);
+// }

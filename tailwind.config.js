@@ -23,7 +23,7 @@ module.exports = {
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             },
             fontFamily: {
-                title: ['"Open Sans"', "sans-serif"],
+                title: "var(--title-font)",
             },
             fontSize: {
                 "2xs": "0.6rem",
@@ -49,14 +49,15 @@ module.exports = {
         rtl: false,
         prefix: "",
         themes: [
-            "night",
+            "dracula",
             {
-                night: {
+                dracula: {
                     ...require("daisyui/src/colors/themes")[
-                        "[data-theme=night]"
+                        "[data-theme=dracula]"
                     ],
-                    primary: "rgb(242 173 13)",
-                    secondary: "rgb(151 169 216)",
+                    primary: "hsl(231 15% 20%)",
+                    secondary: "hsl(231 14% 57% / 1)",
+                    accent: "hsl(41.92deg 89.8% 50%)",
                     // "primary-focus": "#232934",
                     // primary: "#60a5fa",
                     // "primary-focus": "#232934",
