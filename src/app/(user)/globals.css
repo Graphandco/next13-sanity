@@ -18,6 +18,7 @@
 
 body {
     color: rgb(var(--foreground-rgb));
+    min-height: 2000px;
     /* background: linear-gradient(
             to bottom,
             transparent,
@@ -31,4 +32,36 @@ body {
     max-width: 1600px;
     width: 100%;
     padding: 0 clamp(15px, 2.5vw, 50px);
+}
+
+.hamburger-btn {
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.hamburger-btn .hamburger {
+    transition: translate 0.5s, rotate 0.5s;
+}
+
+.hamburger-btn.open .hamburger {
+    translate: 3px -3px;
+    rotate: 0.125turn;
+}
+
+.hamburger-btn .line {
+    transition: 0.5s;
+    stroke-dasharray: 60 31 60 300;
+}
+
+.hamburger-btn.open .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+}
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 95%;
+    background-color: rgb(51 65 85 / 1);
 }
