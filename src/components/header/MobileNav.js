@@ -45,7 +45,7 @@ const MobileNav = ({ links }) => {
 
     return (
         <div>
-            <div className="fixed z-20 top-2 right-2 justify-center items-center md:hidden">
+            <div className="justify-center items-center md:hidden z-20 relative">
                 <button
                     className={`${
                         isOpen ? "hamburger-btn open" : "hamburger-btn"
@@ -54,7 +54,7 @@ const MobileNav = ({ links }) => {
                     onClick={handleMenu}
                 >
                     <svg
-                        stroke="var(--primary)"
+                        stroke="black"
                         fill="none"
                         className="hamburger"
                         viewBox="-10 -10 120 120"
@@ -71,12 +71,12 @@ const MobileNav = ({ links }) => {
                 </button>
             </div>
 
-            {/* <div
+            <div
                 ref={MenuRef}
-                className="fixed z-10 top-0 right-0 h-full w-full bg-slate-800 "
+                className="mobile-menu fixed z-10 top-0 right-0 h-full w-full bg-accent "
             >
                 <Image
-                    src="/logo.png"
+                    src="/logo-black.svg"
                     className="absolute z-0 opacity-5 top-1/2 -translate-y-1/2 w-[200%] -left-1/2"
                     width={2000}
                     height={2000}
@@ -87,7 +87,7 @@ const MobileNav = ({ links }) => {
                         <div className="logo mb-5">
                             <Link href="/">
                                 <Image
-                                    src="/logo.png"
+                                    src="/logo-black.svg"
                                     width={100}
                                     height={100}
                                     alt="Site Logo"
@@ -106,7 +106,7 @@ const MobileNav = ({ links }) => {
                         </li>
                     ))}
                 </ul>
-            </div> */}
+            </div>
         </div>
     );
 };

@@ -20,7 +20,7 @@ const Header = () => {
 
     return (
         <>
-            <header>
+            <header id="site-header">
                 <div className="topbar flex overflow-hidden py-1">
                     {topbarWords.map((word, index) => (
                         <span
@@ -39,32 +39,34 @@ const Header = () => {
                         </span>
                     ))}
                 </div>
-            </header>
-            <div className="container-xl bg-grain-jaune py-5">
-                <div className="flex items-center justify-between border-y-2 border-black py-2 overflow-hidden">
-                    <div className="logo bg-black rounded-full border-1 border-black">
-                        <Link href="/">
-                            <Image
-                                src="/logo.png"
-                                width={50}
-                                height={50}
-                                alt="Site Logo"
-                            />
-                        </Link>
+                <div className="container-xl bg-image-yellow py-5">
+                    <div className="flex items-center justify-between border-y-2 border-black py-2 overflow-hidden">
+                        <div className="text-black text-var(--title-font) font-semibold">
+                            <Link href="/" className="flex items-center gap-2">
+                                <Image
+                                    src="/logo-black.svg"
+                                    width={30}
+                                    height={30}
+                                    alt="Site Logo"
+                                />
+                                <span>Graph and co</span>
+                            </Link>
+                        </div>
+                        <nav>
+                            <ul className=" hidden md:flex items-center gap-5">
+                                {links.map((link, index) => (
+                                    <li key={index}>
+                                        <NavLink {...link} />
+                                    </li>
+                                ))}
+                            </ul>
+                        </nav>
+                        <div>
+                            <MobileNav links={links} />
+                        </div>
                     </div>
-                    <nav>
-                        <ul className=" hidden md:flex items-center gap-5">
-                            {links.map((link, index) => (
-                                <li key={index}>
-                                    <NavLink {...link} />
-                                </li>
-                            ))}
-                        </ul>
-                        <MobileNav links={links} />
-                    </nav>
-                    <div></div>
                 </div>
-            </div>
+            </header>
         </>
     );
 };
