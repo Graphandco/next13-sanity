@@ -28,7 +28,8 @@ module.exports = {
             fontSize: {
                 "2xs": "0.6rem",
                 bigtext: "clamp(22px, calc(7px + 3vw), 2.5rem)",
-                movietitletext: "clamp(12px, calc(4px + 2vw), 1.25rem)",
+                herotext: "clamp(22px, calc(15px + 8vw), 5rem);",
+                herosubtext: "clamp(22px, calc(15px + 6vw), 3rem);",
                 // sm: '0.8rem',
                 // base: '1rem',
                 // xl: '1.25rem',

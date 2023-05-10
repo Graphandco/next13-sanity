@@ -70,7 +70,8 @@ const MobileNav = ({ links }) => {
                     </svg>
                 </button>
             </div>
-            <div
+
+            {/* <div
                 ref={MenuRef}
                 className="fixed z-10 top-0 right-0 h-full w-full bg-slate-800 "
             >
@@ -105,7 +106,7 @@ const MobileNav = ({ links }) => {
                         </li>
                     ))}
                 </ul>
-            </div>
+            </div> */}
         </div>
     );
 };
