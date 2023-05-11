@@ -33,6 +33,7 @@ export const RichTextComponents = {
         h1: ({ children }) => (
             <h1 className="text-5xl text-white">{children}</h1>
         ),
+        h3: ({ children }) => <h3 className="text-h3">{children}</h3>,
     },
     blockquote: ({ children }) => <blockquote>{children}</blockquote>,
 

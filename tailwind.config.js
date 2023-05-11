@@ -19,16 +19,18 @@ module.exports = {
             },
             backgroundImage: {
                 "image-yellow": "url('../../../public/bg-grain-jaune.jpg')",
+                "image-black": "url('../../../public/bg-grain.jpg')",
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic":
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             },
             fontFamily: {
                 title: "var(--title-font)",
-                fat: "var(--fat-font)",
+                fat: "Bigfat",
             },
             fontSize: {
                 "2xs": "0.6rem",
+                h3: "clamp(22px, calc(15px + 3vw), 2rem)",
                 bigtext: "clamp(22px, calc(7px + 3vw), 2.5rem)",
                 herotext: "clamp(22px, calc(15px + 6vw), 4rem)",
                 herosubtext: "clamp(22px, calc(15px + 6vw), 3rem)",

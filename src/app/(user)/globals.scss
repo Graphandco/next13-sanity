@@ -36,11 +36,11 @@ body {
     --text-font: "MostraNuova";
     --title-font: "MostraNuova2";
     --fat-font: "Bigfat";
-    background-image: url(../../../public/bg-grain.jpg);
+    background-image: url(../../../public/bg-grain-jaune.jpg);
     color: black;
     font-family: var(--text-font);
     font-size: 19px;
-    line-height: 1.2;
+    line-height: 1.4;
     min-height: 2000px;
     position: relative;
     isolation: isolate;
@@ -180,4 +180,42 @@ body {
         width: 100%;
         height: 100%;
     }
+}
+.blob {
+    aspect-ratio: 1.3/1;
+    object-fit: cover;
+    animation: border-transform 10s linear infinite;
+}
+.blob-competences {
+    background-color: black;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+@keyframes border-transform {
+    0%,
+    100% {
+        border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+    }
+    14% {
+        border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+    }
+    28% {
+        border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+    }
+    42% {
+        border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    }
+    56% {
+        border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+    }
+    70% {
+        border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    }
+    84% {
+        border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+    }
+}
+.reassurance-title {
+    font-size: clamp(16px, 8px + 2vw, 0.9rem);
 }

@@ -6,9 +6,18 @@ import MobileNav from "./MobileNav";
 const Header = () => {
     const links = [
         { label: "Accueil", path: "/", targetSegment: null },
-        { label: "Réalisation", path: "/rea", targetSegment: "blog" },
+        {
+            label: "Réalisations",
+            path: "/realisations",
+            targetSegment: "realisations",
+        },
+        {
+            label: "Prestations",
+            path: "/prestations",
+            targetSegment: "realisations",
+        },
         { label: "Blog", path: "/blog", targetSegment: "blog" },
-        { label: "Contact", path: "/contact", targetSegment: "blog" },
+        { label: "Contact", path: "/contact", targetSegment: "contact" },
         // {label: '📘 About', path: '/about', targetSegment: 'about'}
     ];
     const topbarWords = [
@@ -21,7 +30,7 @@ const Header = () => {
     return (
         <>
             <header id="site-header">
-                <div className="topbar flex overflow-hidden py-1">
+                <div className="topbar bg-image-black hidden md:flex overflow-hidden py-1">
                     {topbarWords.map((word, index) => (
                         <span
                             key={index}
@@ -39,8 +48,8 @@ const Header = () => {
                         </span>
                     ))}
                 </div>
-                <div className="container-xl bg-image-yellow py-5">
-                    <div className="flex items-center justify-between border-y-2 border-black py-2 overflow-hidden">
+                <div className="container-xl pt-5">
+                    <div className="flex items-center justify-between border-y-2 border-black py-2 md:py-5 overflow-hidden ">
                         <div className="text-black text-var(--title-font) font-semibold">
                             <Link href="/" className="flex items-center gap-2">
                                 <Image
