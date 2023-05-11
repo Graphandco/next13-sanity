@@ -42,6 +42,7 @@ const Competences = ({ unBonSiteWeb, competences }) => {
                             width={400}
                             height={400}
                             alt="Site Logo"
+                            priority={true}
                         />
                     </div>
                 </div>
@@ -59,7 +60,7 @@ const Competences = ({ unBonSiteWeb, competences }) => {
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path
                         fill="#ffffff"
-                        fill-opacity="1"
+                        fillOpacity="1"
                         d="M0,160L0,32L180,32L180,160L360,160L360,256L540,256L540,128L720,128L720,224L900,224L900,320L1080,320L1080,128L1260,128L1260,96L1440,96L1440,320L1260,320L1260,320L1080,320L1080,320L900,320L900,320L720,320L720,320L540,320L540,320L360,320L360,320L180,320L180,320L0,320L0,320Z"
                     ></path>
                 </svg>

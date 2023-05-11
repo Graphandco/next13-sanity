@@ -6,7 +6,7 @@ import ClientSideRoute from "../ClientSideRoute";
 
 const BlogCard = ({ post }) => {
     // console.log(urlForImage(post.mainImage).url);
-    console.log(post);
+    // console.log(post);
     return (
         <div className=" bg-slate-800 rounded-box mx-2 flex w-96 max-w-full flex-shrink-0 flex-col justify-center gap-4 p-4 shadow-xl">
             <figure className="relative">
