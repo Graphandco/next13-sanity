@@ -11,7 +11,7 @@ const Hero = () => {
             const headerHeight =
                 document.querySelector("#site-header").offsetHeight;
             //   const hero = document.querySelector("#hero > .elementor-container");
-            heroRef.current.style.minHeight = `calc(100vh - ${headerHeight}px)`;
+            heroRef.current.style.minHeight = `calc(100dvh - ${headerHeight}px)`;
         };
         setHeroHeight();
         window.addEventListener("resize", setHeroHeight);
