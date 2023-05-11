@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import AppearTranslate from "../animations/AppearTranslate";
+import SplitText from "../SplitText";
 
 const Reassurance = () => {
     const items = [
@@ -31,34 +32,81 @@ const Reassurance = () => {
 
     return (
         <section>
-            <div className="container-xl bg-white py-20 md:py-10 grid grid-cols-2 md:grid-cols-4 ">
-                {items.map((item, index) => (
-                    <AppearTranslate
-                        key={index}
-                        className="transform-bottom flex flex-col gap-2 text-center p-5 "
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="w-10 h-10 mx-auto"
+            <div className="container-xl bg-white py-20 md:py-10">
+                <h2 className="competences-title text-herosubtext gradient-text">
+                    <SplitText text="Les atouts de votre site" color="black" />
+                </h2>
+                {/* <svg
+                    width="500"
+                    height="500"
+                    viewBox="0 0 200 200"
+                    fill="#fffFFF88"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    {" "}
+                    <g clip-path="url(#clip0_105_284)">
+                        {" "}
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 0H50V50H0V0ZM100 50H50V100H0V150H50V200H100V150H150V200H200V150H150V100H200V50H150V0H100V50ZM100 100H150V50H100V100ZM100 100V150H50V100H100Z"
+                            // fill="url(#paint0_linear_105_284)"
+                        />{" "}
+                    </g>{" "}
+                    <defs>
+                        {" "}
+                        <linearGradient
+                            id="paint0_linear_105_284"
+                            x1="100"
+                            y1="0"
+                            x2="100"
+                            y2="200"
+                            gradientUnits="userSpaceOnUse"
                         >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d={item.svg}
-                            />
-                        </svg>
-                        <div className="font-fat reassurance-title">
-                            {item.title}
-                        </div>
-                        <p className="opacity-60 leading-5">
-                            {item.description}
-                        </p>
-                    </AppearTranslate>
-                ))}
+                            {" "}
+                            <stop stop-color="#A7B5FF" />{" "}
+                            <stop offset="1" stop-color="#F3ACFF" />{" "}
+                        </linearGradient>{" "}
+                        <clipPath id="clip0_105_284">
+                            {" "}
+                            <rect width="200" height="200" fill="white" />{" "}
+                        </clipPath>{" "}
+                    </defs>{" "}
+                </svg> */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    {items.map((item, index) => (
+                        <AppearTranslate
+                            key={index}
+                            className="rassurance-item transform-bottom bg-image-black"
+                        >
+                            <div className="rassurance-item-top bg-image-black grid grid-cols-[1fr_2fr]">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    strokeWidth="1.5"
+                                    stroke="currentColor"
+                                    className="w-10 h-10 mx-auto"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d={item.svg}
+                                    />
+                                </svg>
+                                <div className="font-fat reassurance-title">
+                                    {item.title}
+                                </div>
+                            </div>
+                            <div className="rassurance-item-bottom  grid grid-cols-[1fr_2fr]">
+                                <div className="shape bg-image-black"></div>
+                                <p className="description bg-image-black leading-5">
+                                    {item.description}
+                                </p>
+                            </div>
+                        </AppearTranslate>
+                    ))}
+                </div>
             </div>
         </section>
     );

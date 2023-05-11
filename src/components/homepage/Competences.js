@@ -24,9 +24,9 @@ const Competences = ({ unBonSiteWeb, competences }) => {
             <div className="bg-black text-white">
                 <div className="container-xl pt-20 grid grid-cols-1 md:grid-cols-[3fr_2fr]">
                     <div>
-                        <h1 className="text-herosubtext gradient-text">
+                        <h2 className="competences-title text-herosubtext gradient-text">
                             <SplitText text="Nos compétences à votre service"></SplitText>
-                        </h1>
+                        </h2>
                         <div className="pt-10">
                             <PortableText
                                 value={competences[0].body}

@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/all";
 const AppearTranslate = ({
     children,
     from,
+    ease,
 
     className,
 }) => {
@@ -15,7 +16,8 @@ const AppearTranslate = ({
     useLayoutEffect(() => {
         gsap.set(".transform-bottom", {
             opacity: 0,
-            y: 200,
+            scale: 0,
+            // y: 200,
         });
 
         ScrollTrigger.batch(
@@ -27,12 +29,13 @@ const AppearTranslate = ({
                     gsap.to(elements, {
                         // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
                         opacity: 1,
-                        rotate: 0,
-                        x: 0,
-                        y: 0,
+                        scale: 1,
+                        // rotate: 0,
+                        // x: 0,
+                        // y: 0,
                         stagger: 0.25,
                         duration: 1,
-                        ease: "Elastic.easeOut",
+                        ease: ease || "Elastic.easeOut",
                         //ease: Elastic.easeOut,
                         //ease: Bounce.easeOut,
                     });
