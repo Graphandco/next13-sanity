@@ -3,6 +3,7 @@ import Hero from "@/components/homepage/Hero";
 import { groq } from "next-sanity";
 import { client } from "../../../sanity/lib/client";
 import Reassurance from "@/components/homepage/Reassurance";
+import LastNews from "@/components/homepage/LastNews";
 
 const competenceAVotreservice = groq`
 *[_type=='textBlock' && localisation == "home" && slug.current == "nos-competences-a-votre-service"] {
@@ -25,11 +26,12 @@ export default async function Home() {
     return (
         <>
             <Hero />
-            <Reassurance />
             <Competences
                 competences={competences}
                 unBonSiteWeb={unBonSiteWeb}
             />
+            <Reassurance />
+            <LastNews />
         </>
     );
 }

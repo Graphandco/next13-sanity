@@ -14,7 +14,7 @@ const Header = () => {
         {
             label: "Prestations",
             path: "/prestations",
-            targetSegment: "realisations",
+            targetSegment: "prestations",
         },
         { label: "Blog", path: "/blog", targetSegment: "blog" },
         { label: "Contact", path: "/contact", targetSegment: "contact" },
@@ -22,7 +22,7 @@ const Header = () => {
     ];
     const topbarWords = [
         "Création de sites web",
-        "Définir vos besoins",
+        "Identité visuelle",
         "Sites sur-mesure",
         "Branding",
     ];

@@ -31,7 +31,7 @@ const Reassurance = () => {
 
     return (
         <section>
-            <div className="container-xl bg-image-black py-10 md:py-20 grid grid-cols-2 md:grid-cols-4 text-white">
+            <div className="container-xl bg-white py-20 md:py-10 grid grid-cols-2 md:grid-cols-4 ">
                 {items.map((item, index) => (
                     <AppearTranslate
                         key={index}

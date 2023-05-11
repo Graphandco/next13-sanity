@@ -15,7 +15,7 @@ const AppearTranslate = ({
     useLayoutEffect(() => {
         gsap.set(".transform-bottom", {
             opacity: 0,
-            y: 100,
+            y: 200,
         });
 
         ScrollTrigger.batch(
@@ -32,13 +32,13 @@ const AppearTranslate = ({
                         y: 0,
                         stagger: 0.25,
                         duration: 1,
-                        ease: "Expo.easeOut",
+                        ease: "Elastic.easeOut",
                         //ease: Elastic.easeOut,
                         //ease: Bounce.easeOut,
                     });
                 },
-                markers: true,
-                start: "top 90%",
+                // markers: true,
+                start: "top 80%",
             }
         );
     }, []);
