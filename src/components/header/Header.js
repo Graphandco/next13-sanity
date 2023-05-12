@@ -29,7 +29,7 @@ const Header = () => {
 
     return (
         <>
-            <header id="site-header" className="z-50">
+            <header id="site-header" className="z-50 relative">
                 <div className="topbar bg-image-black hidden md:flex overflow-hidden py-1">
                     {topbarWords.map((word, index) => (
                         <span

@@ -73,7 +73,7 @@ const MobileNav = ({ links }) => {
 
             <div
                 ref={MenuRef}
-                className="mobile-menu bg-white fixed top-0 right-0 h-full w-full "
+                className="mobile-menu  bg-white fixed top-0 right-0 h-full w-full "
             >
                 <Image
                     src="/logo-black.svg"
