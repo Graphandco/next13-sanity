@@ -3,6 +3,7 @@ import React from "react";
 import AppearTranslate from "../animations/AppearTranslate";
 import SplitText from "../SplitText";
 import Image from "next/image";
+import ExpandableCard from "../ExpandableCard";
 
 const Reassurance = () => {
     const items = [
@@ -49,6 +50,7 @@ const Reassurance = () => {
                 <h2 className="competences-title text-herosubtext gradient-text">
                     <SplitText text="Les atouts de votre site" color="black" />
                 </h2>
+                {/* <ExpandableCard /> */}
                 <div className="grid grid-cols-1 md:grid-cols-2 py-12 gap-12">
                     {items.map((item, index) => (
                         <AppearTranslate
