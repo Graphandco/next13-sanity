@@ -1,5 +1,4 @@
 const SplitText = ({ text, color }) => {
-    console.log(color);
     return (
         <>
             {text.split("").map((char, index) => {

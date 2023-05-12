@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import LottieRocket from "../lottie/LottieRocket";
 import MagneticButton from "@/components/MagneticButton";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Link from "next/link";
 const Hero = () => {
     const heroRef = useRef();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const setHeroHeight = () => {
             const headerHeight =
                 document.querySelector("#site-header").offsetHeight;
