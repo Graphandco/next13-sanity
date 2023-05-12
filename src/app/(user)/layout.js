@@ -1,7 +1,5 @@
-"use client";
 import Header from "@/components/header/Header";
 import "./globals.scss";
-import CursorWrapper from "@/components/animations/CursorWrapper";
 // import { Inter } from "next/font/google";
 
 // const inter = Inter({ subsets: ["latin"] });
