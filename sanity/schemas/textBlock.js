@@ -1,6 +1,6 @@
 export default {
     name: "textBlock",
-    title: "Bloc de Texte",
+    title: "Blocs de Texte",
     type: "document",
     fields: [
         {

@@ -25,7 +25,7 @@ module.exports = {
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
             },
             fontFamily: {
-                title: "var(--title-font)",
+                title: "MostraNuova2",
                 fat: "Bigfat",
             },
             fontSize: {

@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import LottieRocket from "../lottie/LottieRocket";
 import MagneticButton from "@/components/MagneticButton";
+import Link from "next/link";
 
 const Hero = () => {
     const heroRef = useRef();
@@ -38,17 +39,17 @@ const Hero = () => {
                         web. Moderne et intuitif, votre site sera un puissant
                         levier pour accroitre la vitalité de votre entreprise.
                     </p>
-
-                    <MagneticButton
-                        className="mt-5"
-                        // scale={4}
-                        // tollerance={3}
-                        // speed={0.5}
-                        // borderRadius="50%"
-                    >
-                        Nos prestations
-                    </MagneticButton>
-                    {/* <CurvedText text="Nos prestations" /> */}
+                    <Link href="/prestations">
+                        <MagneticButton
+                            className="mt-5"
+                            // scale={4}
+                            // tollerance={3}
+                            // speed={0.5}
+                            // borderRadius="50%"
+                        >
+                            Nos prestations
+                        </MagneticButton>
+                    </Link>
                 </div>
             </div>
         </section>

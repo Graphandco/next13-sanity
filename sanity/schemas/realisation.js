@@ -1,6 +1,6 @@
 export default {
-    name: "post",
-    title: "Blog",
+    name: "realisation",
+    title: "Réalisations",
     type: "document",
     fields: [
         {
@@ -18,12 +18,6 @@ export default {
             },
         },
         {
-            name: "author",
-            title: "Autheur",
-            type: "reference",
-            to: { type: "author" },
-        },
-        {
             name: "excerpt",
             title: "Extrait",
             type: "string",
@@ -31,7 +25,7 @@ export default {
         },
         {
             name: "mainImage",
-            title: "Main image",
+            title: "Image à la une",
             type: "image",
             options: {
                 hotspot: true,
@@ -45,10 +39,31 @@ export default {
             ],
         },
         {
-            name: "categories",
-            title: "Categories",
-            type: "array",
-            of: [{ type: "reference", to: { type: "category" } }],
+            name: "mockupImage",
+            title: "Mockup",
+            type: "image",
+            options: {
+                hotspot: true,
+            },
+            fields: [
+                {
+                    name: "alt",
+                    type: "string",
+                    title: "Alternative Text",
+                },
+            ],
+        },
+        {
+            name: "logo",
+            title: "Logo",
+            type: "image",
+            fields: [
+                {
+                    name: "alt",
+                    type: "string",
+                    title: "Alternative Text",
+                },
+            ],
         },
         {
             name: "publishedAt",

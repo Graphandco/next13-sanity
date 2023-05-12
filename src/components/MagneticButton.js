@@ -12,6 +12,8 @@ const MagneticButton = ({
     scale = 1.2,
     debug = false,
     borderRadius = 0,
+    color = "var(--accent)",
+    background = "black",
     ...props
 }) => {
     const $root = useRef();
@@ -86,6 +88,20 @@ const MagneticButton = ({
         });
     };
 
+    const btnStyle = {
+        backgroundColor: `${background}`,
+        color: `${color}`,
+        border: "none",
+        cursor: "pointer",
+        position: "relative",
+        zIndex: 1,
+        touchAction: "none",
+        fontFamily: "var(--fat-font)",
+        overflow: "hidden",
+        borderRadius: "50px",
+        padding: "20px 40px",
+    };
+
     return (
         <button
             ref={$root}
@@ -96,6 +112,7 @@ const MagneticButton = ({
             onTouchStart={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onTouchEnd={handleMouseLeave}
+            style={btnStyle}
             {...props}
         >
             <span ref={$item} className="magnetic-button--item">

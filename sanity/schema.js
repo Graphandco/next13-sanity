@@ -3,7 +3,8 @@ import category from "./schemas/category";
 import post from "./schemas/post";
 import author from "./schemas/author";
 import textBlock from "./schemas/textBlock";
+import realisation from "./schemas/realisation";
 
 export const schema = {
-    types: [post, author, category, blockContent, textBlock],
+    types: [post, blockContent, textBlock, realisation, author, category],
 };
